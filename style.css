@@ -1035,69 +1035,151 @@ nav a:hover {
     color: rgba(255, 255, 255, 0.7);
 }
 
-
-
-/* --- Адаптивность (медиа-запросы) --- */
-
-/* Общие стили для iframe (карт) */
 .map-container iframe {
   width: 100%;
-  height: 300px; /* Высота по умолчанию */
+  height: 300px;
 }
 
-/* Для экранов меньше 1200px (большие планшеты и ноутбуки) */
 @media (max-width: 1200px) {
+    .container {
+        max-width: 90%;
+        padding: 0 10px;
+    }
 
-    /* Уменьшаем шрифт в контактной информации */
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .logo img {
+        margin-bottom: 10px;
+    }
+
     header .contact-info {
+        text-align: center;
+        margin-bottom: 10px;
         font-size: 12pt;
     }
 
-    /*  Перестраиваем отзывы в колонку на маленьких экранах */
-    .testimonial-card-container {
-        width: 80%;
+    #tour-details .tour-photos img {
+         max-width: 100%; 
+        height: 400px;
+        margin-bottom: 20px;
+    }
+    #tour-details .photo-grid {
+      flex-direction: column;
+      align-items: center;
     }
 
-    /* Немного уменьшаем размер шрифта h2 в секции "О нас" */
-    #about-us h2 {
-        font-size: 26pt;
-    }
 }
 
-/* Для экранов меньше 992px (маленькие планшеты) */
 @media (max-width: 992px) {
-
-    /* Меняем направление навигации на колонку */
     nav .container {
         flex-direction: column;
         align-items: center;
     }
 
-    /* Уменьшаем отступы в навигации */
     nav a {
         margin: 5px 0;
         padding: 8px 15px;
         font-size: 13pt;
     }
 
-    /* Карточки с турами занимают всю ширину */
     .tour-card {
         flex: 0 0 100%;
         margin-right: 0;
         margin-bottom: 20px;
     }
 
-    /* Адаптируем размер шрифта в "О нас" */
-    #about-us {
-        font-size: 14pt;
+  .tour-overview {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tour-overview img,
+  .tour-info {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  #tour-details .tour-photos img {
+      max-width: 100%; 
+      height: 250px;
+      margin-bottom: 10px;
+  }
+  #tour-details .photo-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+@media (max-width: 768px) {
+    #about-us .guide-card {
+        flex-basis: 100%; /* Каждый гид на всю ширину */
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 
-    /* И h2 тоже */
-    #about-us h2 {
-        font-size: 24pt;
+    #hero .hero-image img {
+        height: 600px;
     }
 
-   .footer-content {
+    .container {
+        padding: 0 10px;
+    }
+
+    header .logo img {
+        height: 80px;
+        width: 120px;
+    }
+
+    #hero .hero-text h1 {
+        font-size: 28pt;
+    }
+
+    #hero .hero-text p {
+        font-size: 16pt;
+    }
+
+    #tour-details .tour-photos img {
+        width: 100%; /* Занимает всю ширину */
+        max-width: 100%; /* Без ограничений */
+        height: auto; /* Автоматическая высота */
+        margin-bottom: 10px;
+    }
+
+       .tour-container {
+        margin-left: -10px;  /* Компенсируем отступ слева */
+        margin-right: -10px; /* Компенсируем отступ справа */
+    }
+
+    .tour-card {
+        margin-left: 10px;   /* Добавляем отступ слева */
+        margin-right: 10px;  /* Добавляем отступ справа */
+        margin-bottom: 20px; /* Добавляем отступ снизу */
+    }
+
+   
+    .tour-card .price {
+        font-size: 0.7em;
+        min-height: auto;
+    }
+    #testimonials h2 {
+        font-size: 22pt;
+    }
+
+  .testimonial-card-container {
+    max-width: 100%;
+  }
+
+  .arrow-button {
+    font-size: 1.5em;
+  }
+
+  .footer-content {
       flex-direction: column;
       text-align: center;
   }
@@ -1115,38 +1197,36 @@ nav a:hover {
       margin-bottom: 20px;
   }
 
-      /* Адаптивность для карты Google */
-    .map-container iframe {
-      height: 250px; /*  Меньшая высота на планшетах  */
-    }
-        /* Плашки с ценами */
-    .tour-card .price {
-        font-size: 0.9em;
-    }
+  #tour-details .tour-photos img {
+      max-width: 100%; 
+      height: 250px;
+      margin-bottom: 10px;
+  }
+  #tour-details .photo-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .guide-card-wrapper {
+    width: 50%; /*  Уменьшаем ширину контейнера */
+    margin-left: auto; /* Центрируем контейнер */
+    margin-right: auto;
+  }
 
-    /* Кнопки забронировать тур */
-    .tour-card .button {
-        font-size: 1em;
-    }
-    #about-us .guide-card {
-      flex-basis: 100%;
-    }
 }
 
-/* Для экранов меньше 768px (мобильные телефоны) */
-@media (max-width: 768px) {
-
-    /*  Уменьшаем высоту hero image  */
-    #hero .hero-image img {
-        height: 500px;
+@media (max-width: 576px) {
+    header .contact-info {
+        font-size: 12pt;
     }
 
-    /* Уменьшаем отступы для контента */
-    .container {
-        padding: 0 10px;
+    nav a {
+        font-size: 12pt;
+        padding: 8px 16px;
     }
 
-    /* Корректируем шрифт в hero text */
+}
+
+@media (max-width: 480px) {
     #hero .hero-text h1 {
         font-size: 24pt;
     }
@@ -1154,65 +1234,20 @@ nav a:hover {
     #hero .hero-text p {
         font-size: 14pt;
     }
-    .guide-card-wrapper {
-    width: 50%; /*  Уменьшаем ширину контейнера */
-    margin-left: auto; /* Центрируем контейнер */
-    margin-right: auto;
-    }
-      /* Адаптивность для карты Google */
-    .map-container iframe {
-      height: 200px; /* Еще меньше высота на телефонах */
-    }
-        /* Плашки с ценами */
-    .tour-card .price {
-        font-size: 0.7em; /* Еще уменьшаем шрифт для цены */
-        min-height: auto;
-    }
 
-    /* Кнопки забронировать тур */
-    .tour-card .button {
-        font-size: 0.8em; /* Еще уменьшаем шрифт кнопки */
-        padding: 6px 10px; /* Меньше отступы для кнопки */
-    }
-}
-
-/* Для экранов меньше 576px (маленькие телефоны) */
-@media (max-width: 576px) {
-
-    /* Уменьшаем шрифт в контактной информации */
-    header .contact-info {
-        font-size: 11pt;
-    }
-
-    /* Еще уменьшаем шрифт ссылок в навигации */
-    nav a {
-        font-size: 11pt;
-        padding: 6px 12px;
-    }
-}
-
-/* Для экранов меньше 480px (очень маленькие телефоны) */
-@media (max-width: 480px) {
-    /* Адаптивность для отзывов */
-    .testimonial-card img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .testimonial-card h3 {
-        font-size: 1em;
-    }
-
-    .testimonial-card p {
-        font-size: 0.9em;
-    }
-    .guide-card-wrapper {
+  #tour-details .tour-photos img {
+      max-width: 100%; 
+      height: 100px;
+      margin-bottom: 10px;
+  }
+  #tour-details .photo-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .guide-card-wrapper {
     width: 30%; /*  Уменьшаем ширину контейнера */
     margin-left: auto; /* Центрируем контейнер */
     margin-right: auto;
-    }
-         /* Еще уменьшаем размер шрифта */
-    .tour-card .price {
-        font-size: 0.6em;
-    }
+  }
+
 }
