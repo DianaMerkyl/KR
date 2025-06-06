@@ -1217,6 +1217,7 @@ nav a:hover {
 
   .map-container iframe {
       height: 200px;
+      widtg: 60%;
     }
 }
 
