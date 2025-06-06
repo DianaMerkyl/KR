@@ -1118,7 +1118,7 @@ nav a:hover {
 
 @media (max-width: 768px) {
     #about-us .guide-card {
-        flex-basis: 100%; /* Каждый гид на всю ширину */
+        flex-basis: 100%; 
         margin-right: 0;
         margin-bottom: 20px;
     }
@@ -1145,21 +1145,21 @@ nav a:hover {
     }
 
     #tour-details .tour-photos img {
-        width: 100%; /* Занимает всю ширину */
-        max-width: 100%; /* Без ограничений */
-        height: auto; /* Автоматическая высота */
+        width: 100%;
+        max-width: 100%;
+        height: auto;
         margin-bottom: 10px;
     }
 
        .tour-container {
-        margin-left: -10px;  /* Компенсируем отступ слева */
-        margin-right: -10px; /* Компенсируем отступ справа */
+        margin-left: -10px; 
+        margin-right: -10px;
     }
 
     .tour-card {
-        margin-left: 10px;   /* Добавляем отступ слева */
-        margin-right: 10px;  /* Добавляем отступ справа */
-        margin-bottom: 20px; /* Добавляем отступ снизу */
+        margin-left: 10px;
+        margin-right: 10px;  
+        margin-bottom: 20px; 
     }
 
    
@@ -1207,11 +1207,17 @@ nav a:hover {
     align-items: center;
   }
   .guide-card-wrapper {
-    width: 50%; /*  Уменьшаем ширину контейнера */
-    margin-left: auto; /* Центрируем контейнер */
+    width: 50%; 
+    margin-left: auto;
     margin-right: auto;
   }
+  .tour-card p {
+    font-size: 1em;
+  }
 
+  .map-container iframe {
+      height: 200px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1245,8 +1251,8 @@ nav a:hover {
     align-items: center;
   }
   .guide-card-wrapper {
-    width: 30%; /*  Уменьшаем ширину контейнера */
-    margin-left: auto; /* Центрируем контейнер */
+    width: 30%; 
+    margin-left: auto; 
     margin-right: auto;
   }
 
