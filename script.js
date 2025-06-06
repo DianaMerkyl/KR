@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
     { name: "Вокруг Ольхона", link: "pop5.html" },
     { name: "Велотур по КЖД", link: "pop6.html" },
     { name: "Байкальская Ривьера", link: "pop7.html" },
-    { name: "Теплы Озера", link: "pop9.html" },
+    { name: "Теплые Озера", link: "pop9.html" },
     { name: "Аршан: Целебные источники", link: "pop8.html" },
     { name: "Байкал: Летний Эксперсс", link: "hot1.html" },
     { name: "Приключения на Байкале", link: "hot2.html" },
