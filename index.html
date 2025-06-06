@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Диалан Байкал</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="blahblahblah" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg== " crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Диалан Байкал - туры по Байкалу">
+            </div>
+            <div class="search-bar">
+    		<input type="text" id="searchInput" placeholder="Поиск по турам">
+    		<button id="searchButton"><i class="fa fa-search"></i></button>
+	    </div>
+	    <div id="search-message"></div>
+            <div class="contact-info">
+                <i class="fas fa-phone"></i> +7 (964) 101 - 66 - 81<br>
+                <a href="#">Перезвоните нам</a>
+            </div>
+            <a href="#" class="book-tour-btn">Забронировать тур</a>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <a href="/#hot-tours">Горящие туры</a>
+            <a href="/#popular-tours">Популярные туры</a>
+            <a href="/#thematic-tours">Тематические туры</a>
+            <a href="/#about-us">О нас</a>
+            <a href="/#testimonials">Отзывы</a>
+            <a href="/#footer">Контакты</a>
+        </div>
+    </nav>
+    <main>
+        <section id="hero">
+            <div class="hero-image">
+                <img src="baikal_hero.jpg" alt="Байкал">
+                <div class="hero-text">
+                    <h1>НЕЗАБЫВАЕМЫЕ ТУРЫ НА БАЙКАЛ!</h1>
+                    <p>Поможем отдохнуть и перезагрузиться. Выбирайте именно нас!</p>
+                </div>
+            </div>
+        </section>
+        <section id="hot-tours">
+            <div class="container">
+                <h2>ГОРЯЩИЕ ТУРЫ</h2>
+                <div class="tour-container">
+                    <div class="tour-card">
+                        <img src="hot1.jpg" alt="Байкал: Летний Экспресс">
+                        <p class="price">Цена: 40000 руб</p>
+                        <h3>Байкал: Летний Экспресс</h3>
+                        <div class="duration">
+                            <i class="far fa-calendar-alt"></i> 5 дней / 4 ночи
+                        </div>
+                        <p>Остров Ольхон, водная прогулка по Байкалу, легендарная Шаман-скала. Самые яркие впечатления от Байкала за короткий отпуск!</p>
+                        <a href="hot1.html" class="button">Подробнее о туре</a>
+                    </div>
+
+                    <div class="tour-card">
+                        <img src="hot2.jpg" alt="Приключения на Байкале">
+                        <p class="price">Цена: 45000 руб</p>
+                        <h3>Приключения на Байкале</h3>
+                        <div class="duration">
+                            <i class="far fa-calendar-alt"></i> 7 дней / 6 ночей
+                        </div>
+                        <p>Круиз по озеру, посещение КЖД, рыбалка. Насыщенный активный отдых на Байкале для любителей приключений!</p>
+                        <a href="hot2.html" class="button">Подробнее о туре</a>
+                    </div>
+
+                    <div class="tour-card">
+                        <img src="hot3.jpg" alt="Байкал: Гармония с Природой">
+                        <p class="price">Цена: 60000 руб</p>
+                        <h3>Байкал: Гармония с Природой</h3>
+                        <div class="duration">
+                            <i class="far fa-calendar-alt"></i> 9 дней / 8 ночей
+                        </div>
+                        <p>Ежедневные занятия йогой, медитации на берегу озера, посещение буддийских храмов. Тур для восстановления сил!</p>
+                        <a href="hot3.html" class="button">Подробнее о туре</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="popular-tours">
+            <div class="container">
+                <h2>ПОПУЛЯРНЫЕ ТУРЫ</h2>
+                <div class="tour-filters">
+                    <div class="container">
+                        <button class="filter-button" data-category="excursion">Экскурсионные туры</button>
+                        <button class="filter-button" data-category="active">Активные туры</button>
+                        <button class="filter-button" data-category="weekend">Туры выходного дня</button>
+                    </div>
+		</div>
+                <div class="tour-container" id="tour-list">
+                </div>
+            </div>
+        </section>
+        <section id="thematic-tours">
+    <div class="container">
+        <h2>ТЕМАТИЧЕСКИЕ ТУРЫ</h2>
+        <h3>ЗИМА 2025</h3>
+        <div class="tour-container" id="thematic-tour-list">
+            <div class="tour-card" data-season="winter">
+                <img src="tem1.jpg" alt="Зимняя Сказка в Листвянке">
+                <p class="price">Цена: 75000 руб</p>
+                <h3>Зимняя Сказка в Листвянке</h3>
+                <div class="duration">
+                    <i class="far fa-calendar-alt"></i> 4 дня / 3 ночи
+                </div>
+                <p>Празднование Нового Года на берегу Байкала! Развлекательная программа, банкет, катание на коньках и снегоходах!</p>
+                <a href="tem1.html" class="button">Подробнее о туре</a>
+            </div>
+            <div class="tour-card" data-season="winter">
+                <img src="tem2.jpg" alt="Экспедиция в Бухту Песчаная">
+                <p class="price">Цена: 65000 руб</p>
+                <h3>Экспедиция в Бухту Песчаная</h3>
+                <div class="duration">
+                    <i class="far fa-calendar-alt"></i> 6 дней / 5 ночей
+                </div>
+                <p> Переезд на хивусе по льду Байкала, прогулки по заснеженным окрестностям, посещение ледяных пещер!</p>
+                <a href="tem2.html" class="button">Подробнее о туре</a>
+            </div>
+            <div class="tour-card" data-season="winter">
+                <img src="tem3.jpg" alt="Ледяная Сказка Байкала">
+                <p class="price">Цена: 55000 руб</p>
+                <h3>Ледяная Сказка Байкала</h3>
+                <div class="duration">
+                    <i class="far fa-calendar-alt"></i> 5 дней / 4 ночи
+                </div>
+                <p>Путешествие на остров Ольхон по льду Байкала, посещение ледяных гротов и пещер, фотосессии на фоне кристально чистого льда!</p>
+                <a href="tem3.html" class="button">Подробнее о туре</a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+        <section id="about-us">
+            <div class="container">
+                <h2>О НАС</h2>
+                <p class="description"><p><b>«Диалан Байкал»</b> — это не просто туры, это <b>уникальные авторские путешествия</b>, созданные с любовью к Байкалу и заботой о каждом госте. Мы верим, что настоящее знакомство с Байкалом возможно только через погружение в его культуру, общение с местными жителями и исследование неизведанных уголков.</p>
+
+        <p>Наша команда — это опытные путешественники, профессиональные гиды и энтузиасты своего дела, которые знают Байкал как свои пять пальцев. Мы предлагаем не просто маршруты, а целые истории, наполненные яркими впечатлениями, захватывающими приключениями и незабываемыми эмоциями.</p>
+
+        <p><b>Мы гордимся тем, что каждый тур «Диалан Байкал» — это индивидуальный проект, разработанный с учетом ваших пожеланий и предпочтений.</b> Мы поможем вам создать идеальное путешествие, которое останется в вашей памяти навсегда.</p>
+                <div class="guides-container">
+                    <button class="arrow-button left-arrow" aria-label="Предыдущий гид"><i class="fas fa-chevron-left"></i></button>
+                    <div class="guide-card-container">
+                        <div class="guide-card-wrapper">
+                            <div class="guide-card" data-index="0">
+                                <img src="gid3.png" alt="Смирнова Алина Юрьевна">
+        			<div class="guide-info">
+          			  <h3>Смирнова Алина Юрьевна</h3>
+          			  <p class="specialization">Специалист по зимним турам и фото Байкала</p>
+          			  <p>Самый лучший эксперт по зимнему Байкалу. Она знает все о ледовых пещерах, зимних пейзажах и лучших местах для фотосессий. Если вы хотите увидеть зимнюю сказку, покататься на снегоходах и сделать потрясающие фотографии, Алина – ваш гид!</p>
+        		        </div>
+                            </div>
+                            <div class="guide-card" data-index="1">
+                                <img src="gid1.png" alt="Иванов Алексей Петрович">
+                                <div class="guide-info">
+                                    <h3>Иванов Алексей Петрович</h3>
+                                    <p class="specialization">Специалист по истории Байкала и культуре коренных народов</p>
+				    <p>Опытный гид с многолетним стажем работы, Алексей – настоящий знаток истории Байкала. Он увлечен краеведением и всегда рад поделиться своими знаниями о культуре и традициях коренных народов Прибайкалья. Его экскурсии полны интересных фактов и захватывающих историй.</p>
+                                </div>
+                            </div>
+                            <div class="guide-card" data-index="2">
+                                <img src="gid2.png" alt="Цыренов Баир Сергеевич">
+                                <div class="guide-info">
+                                    <h3>Цыренов Баир Сергеевич</h3>
+				    <p class="specialization">Проводник в мир активного отдыха и дикой природы Байкала</p>
+                                    <p>Баир – опытный проводник в мир активного отдыха. Он обожает природу и знает множество секретных троп и красивейших мест Байкала. Если вы хотите покорить вершины, увидеть дикую природу во всей красе и получить заряд адреналина, Баир – ваш гид!</p>
+                                </div>
+                            </div>
+                            <div class="guide-card" data-index="3">
+                                <img src="gid5.jpg" alt="Ольга Сергеевна">
+                                <div class="guide-info">
+                                    <h3>Соколова Мария Владимировна</h3>
+				    <p class="specialization">Специалист по отдыху выходного дня и байкальской кухне</p>
+                                    <p>Мария – специалист по отдыху выходного дня. Она поможет вам познакомиться с самыми интересными уголками Листвянки, увидеть очаровательных нерп в нерпинарии, а также провести незабываемые кулинарные мастер-классы по приготовлению блюд байкальской кухни.</p>
+                                </div>
+                            </div>
+                            <div class="guide-card" data-index="3">
+                                <img src="gid6.jpg" alt="Алексей Петрович">
+                                <div class="guide-info">
+                                    <h3>Васильев Алексей Петрович</h3>
+				    <p class="specialization">Эксперт по рыбалке на Байкале и мастер-класс по копчению омуля</p>
+                                    <p>Алексей – заядлый рыбак и знаток Байкала. Он покажет вам лучшие места для рыбалки, научит ловить байкальского омуля и раскроет секреты его копчения по старинным сибирским рецептам. Присоединяйтесь к Алексею, чтобы испытать азарт рыбалки и насладиться вкусом настоящего Байкала!</p>
+                                </div>
+                            </div>
+                            <div class="guide-card" data-index="4">
+                                <img src="gid4.png" alt="Дмитрий Андреевич">
+                                <div class="guide-info">
+                                    <h3>Петров Павел Николаевич</h3>
+				    <p class="specialization">Капитан вашей байкальской мечты и эксперт по круизам</p>
+                                    <p>Павел – настоящий капитан вашей байкальской мечты! Он знает все о водной глади Байкала, организует увлекательные круизы, незабываемую рыбалку и комфортный отдых на борту. С ним вы сможете насладиться красотой Байкала с воды.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="arrow-button right-arrow" aria-label="Следующий гид"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+<section id="testimonials">
+    <div class="container">
+        <h2>ОТЗЫВЫ</h2>
+        <div class="testimonials-container">
+            <button class="arrow-button left-arrow" aria-label="Предыдущий отзыв"><i class="fas fa-chevron-left"></i></button>
+            <div class="testimonial-card-container">
+                <div class="testimonial-card-wrapper">
+                    <div class="testimonial-card" data-index="0">
+                        <img src="victoria12.png" alt="Viktoria12">
+                        <h3>Viktoria12</h3>
+                        <p class="date">Январь, 2025</p>
+                        <p>Просто волшебно! Встретили Новый Год прямо на берегу Байкала, было очень весело и атмосферно. Отличная организация и вкусная еда. Спасибо!</p>
+                    </div>
+                    <div class="testimonial-card" data-index="1">
+                        <img src="dinara.png" alt="Dinara_A">
+                        <h3>Dinara_A</h3>
+                        <p class="date">Август, 2024</p>
+                        <p>“Термальные источники Арашан” – это отличный тур для тех, кто ищет приключения и хочет увидеть Байкал с другой стороны! Рекомендую!</p>
+                    </div>
+                    <div class="testimonial-card" data-index="2">
+                        <img src="alex.png" alt="Alex_1990">
+                        <h3>Alex_1990</h3>
+                        <p class="date">Июнь, 2024</p>
+                        <p>Все было продумано до мелочей, от комфортного трансфера до вкуснейшего питания. Байкал прекрасен, и этот тур помог мне прочувствовать его красоту и величие!</p>
+                    </div>
+                    <div class="testimonial-card" data-index="3">
+                        <img src="micha.png" alt="Micha_47">
+                        <h3>Micha_47</h3>
+                        <p class="date">Сентябрь, 2024</p>
+                        <p>Этот авторский тур – лучший способ увидеть настоящий Байкал, подальше от обычных маршрутов. Индивидуальный подход, уникальная программа и море впечатлений гарантированы!</p>
+                    </div>
+		    <div class="testimonial-card" data-index="4">
+                        <img src="ek.png" alt="Ekaterina">
+                        <h3>Ekaterina</h3>
+                        <p class="date">Июль, 2024</p>
+                        <p>Байкал покорил мое сердце! Иванов Алексей Петрович - вы профессионал, создавший для нас незабываемые впечатления!</p>
+                    </div>
+		    <div class="testimonial-card" data-index="5">
+                        <img src="AndreyT.png" alt="Andrey_T">
+                        <h3>Andrey_T</h3>
+                        <p class="date">Ноябрь, 2024</p>
+                        <p>Организация на высшем уровне, гид просто замечательный, а Байкал - это настоящее чудо! Спасибо за эти волшебные дни, полные ярких эмоций и незабываемых впечатлений!</p>
+                    </div>
+                </div>
+            </div>
+            <button class="arrow-button right-arrow" aria-label="Следующий отзыв"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="testimonial-navigation">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+    	    <span class="dot" data-index="4"></span>
+            <span class="dot" data-index="5"></span> 
+        </div>
+    </div>
+</section>
+<div class="modal fade" id="bookingModalHeader" tabindex="-1" aria-labelledby="bookingModalHeaderLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="bookingModalHeaderLabel">Забронировать тур</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="bookingFormHeader">
+                    <div class="mb-3">
+                        <label for="nameHeader" class="form-label">Имя</label>
+                        <input type="text" class="form-control" id="nameHeader" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tourNameHeader" class="form-label">Название тура</label>
+                        <input type="text" class="form-control" id="tourNameHeader"  required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phoneHeader" class="form-label">Телефон</label>
+                        <input type="tel" class="form-control" id="phoneHeader" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="emailHeader" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="emailHeader" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+<footer class="footer" id="footer">
+    <div class="container">
+        <h2>КОНТАКТЫ</h2>
+        <div class="footer-content">
+            <div class="footer-section">
+                <p>Подпишитесь на новостную рассылку</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="E-mail...">
+                    <button type="submit">Подписаться</button>
+                </form>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2441.8350037856712!2d104.25192507714875!3d52.264541171995425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5da82359d94f1547%3A0x178f943398366b2c!2z0YPQuy4g0JvQvtC80L7QvdC-0YHQvtCy0LAsIDXQkCwg0JjRgNC60YPRgtGB0LosINCY0YDQutGD0YLRgdC60LDRjyDQvtCx0LsuLCA2NjQwNzQ!5e0!3m2!1sru!2sru!4v1748515836034!5m2!1sru!2sru" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <div class="footer-links social-links">
+                    <h3>Навигация</h3>
+                    <a href="/#hot-tours">Горящие туры</a>
+                    <a href="/#popular-tours">Популярные туры</a>
+                    <a href="/#thematic-tours">Тематические туры</a>
+                    <a href="/#about-us">О нас</a>
+                    <a href="/#testimonials">Отзывы</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <div class="contact-and-social">
+                    <div class="social-links">
+                        <h3>Контактная информация</h3>
+                        <a href="#"><i class="fas fa-phone"></i>+7(964)101-66-81</a>
+                        <a href="#"><i class="fas fa-envelope"></i>dialan.baikalfree@mail.ru</a>
+                        <a href="#"><i class="fab fa-vk"></i> @dialan.baikal</a>
+                        <a href="#"><i class="fab fa-telegram"></i> @dialan.tyr38</a>
+                        <a href="#"><i class="fab fa-whatsapp"></i> @dialan.baikal</a>
+                        <a href="#"><i class="fab fa-viber"></i> @dialan.viber</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">&copy; Диалан Байкал, 2025</p>
+    </div>
+</footer>
+</body>
+<a href="#" class="scroll-to-top">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script src="guideSlider.js"></script>
+</html>
