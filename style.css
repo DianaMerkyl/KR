@@ -53,19 +53,20 @@ header .contact-info a {
 header .book-tour-btn {
     background-color: #02699E;
     color: white;
-    padding: 12px 25px;
-    font-size: 16pt;
+    padding: 8px 16px; 
+    font-size: 12pt; 
     border-radius: 20px;
     text-decoration: none;
     white-space: nowrap;
+    margin-bottom: 10px; 
 }
 
 header .search-bar {
+    display: flex;
     flex-grow: 1;
-    max-width: 300px;
-    margin: 0 20px;
+    max-width: 80%; 
+    margin: 0 auto; 
 }
-
 header .search-bar input {
     padding: 8px;
     border: none;
