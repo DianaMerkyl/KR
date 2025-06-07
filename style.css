@@ -1008,6 +1008,7 @@ nav a:hover {
     .tour-filters .container {
         flex-direction: column !important; /* В столбик */
         align-items: stretch !important; /* На всю ширину */
+        padding: 0 !important; /* Убираем отступы контейнера */
     }
 
     .filter-button {
@@ -1016,6 +1017,8 @@ nav a:hover {
         margin: 5px 0 !important; /* Отступы сверху и снизу */
         width: 100% !important; /* На всю ширину */
         box-sizing: border-box !important; /* Чтобы padding не ломал ширину */
+        display: block !important;  /*  Растягиваем кнопки  */
+        text-align: center !important;  /* Центрируем текст */
     }
 
     /*  Сжимаем карту и форму подписки  */
@@ -1040,6 +1043,7 @@ nav a:hover {
     #about-us .guide-card p {
         margin-bottom: 15px !important; /* Добавляем отступ */
     }
+        /*  Убираем отступы у карточек туров  */
     .tour-container {
         padding: 0 5px;
     }
@@ -1049,7 +1053,6 @@ nav a:hover {
         padding: 10px;
     }
 }
-
 @media (max-width: 576px) {
     header .contact-info {
         font-size: 11pt;
