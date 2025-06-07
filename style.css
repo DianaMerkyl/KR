@@ -22,13 +22,7 @@ header {
 header .container {
     display: flex;
     align-items: center;
-}
-
-.header-right {
-    display: flex;
-    flex-grow: 1;
     justify-content: space-between;
-    align-items: center;
 }
 
 header .logo img {
@@ -53,20 +47,21 @@ header .contact-info a {
 header .book-tour-btn {
     background-color: #02699E;
     color: white;
-    padding: 8px 16px; 
-    font-size: 12pt; 
+    padding: 8px 16px;
+    font-size: 12pt;
     border-radius: 20px;
     text-decoration: none;
     white-space: nowrap;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 header .search-bar {
     display: flex;
     flex-grow: 1;
-    max-width: 80%; 
-    margin: 0 auto; 
+    max-width: 80%;
+    margin: 0 auto;
 }
+
 header .search-bar input {
     padding: 8px;
     border: none;
@@ -410,7 +405,6 @@ nav a:hover {
     line-height: 1.4;
     text-align: center;
 }
-
 
 #about-us .arrow-button {
     border: none; 
@@ -822,184 +816,7 @@ nav a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.modal {
-
-    font-family: Montserrat, sans-serif;
-}
-
-#successModal {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -130%);
-    z-index: 1055;
-    width: 80%;
-    max-width: 500px;
-}
-
-#successModal.show {
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    padding: 20px;
-}
-
-.modal-content {
-    background-color: #2980b9;
-    color: #004568;
-    border: none;
-    border-radius: 20px;
-}
-
-.modal-header {
-    background-color: #3498db;
-    border-bottom: 1px solid #2980b9;
-    padding: 20px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-
-.modal-title {
-    font-size: 24px;
-    color: #fff;
-}
-
-.modal-body {
-    padding: 20px;
-}
-
-.modal-footer {
-    border-top: none;
-    padding: 20px;
-}
-
-.modal .btn-primary {
-    background-color: #004568;
-    border: none;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 10px;
-    font-size: 16px;
-}
-
-.modal .btn-primary:hover {
-    background-color: #CCEDFF;
-    color: #004568;
-}
-
-.btn-close {
-    color: white;
-}
-
-.form-label {
-    font-weight: bold;
-    color: #004568;
-}
-
-.form-control {
-    background-color: rgba(255, 255, 255, 0.2);
-    border: none;
-    color: #004568;
-    border-radius: 20px;
-    padding: 10px;
-}
-
-.form-control::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.map-container iframe {
-  width: 100%;
-  height: 300px;
-}
-
-@media (max-width: 1200px) {
-    header .contact-info {
-        font-size: 12pt;
-    }
-    .testimonial-card-container {
-        width: 80%;
-    }
-    #about-us h2 {
-        font-size: 26pt;
-    }
-}
-
-@media (max-width: 992px) {
-    nav .container {
-        flex-direction: column;
-        align-items: center;
-    }
-    nav a {
-        margin: 5px 0;
-        padding: 8px 15px;
-        font-size: 13pt;
-    }
-    .tour-card {
-        flex: 0 0 100%;
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-    #about-us {
-        font-size: 14pt;
-    }
-    #about-us h2 {
-        font-size: 24pt;
-    }
-   .footer-content {
-      flex-direction: column;
-      text-align: center;
-  }
-  .footer-contacts,
-  .footer-links,
-  .footer-social {
-      text-align: center;
-  }
-
-  .footer-links {
-      flex-direction: column;
-  }
-
-  .footer-links-column {
-      margin-bottom: 20px;
-  }
-
-    .map-container iframe {
-      height: 250px;
-    }
-    .tour-card .price {
-        font-size: 0.9em;
-    }
-    .tour-card .button {
-        font-size: 0.9em;
-          padding: 6px 8px;
-    }
-    #about-us .guide-card {
-      flex-basis: 100%;
-    }
-}
-
 @media (max-width: 768px) {
-    header .book-tour-btn {
-        font-size: 10pt !important;
-        padding: 8px 16px !important;
-        margin-top: 10px !important;
-        margin-bottom: 10px !important;
-    }
-
-    header .search-bar {
-        max-width: 80% !important; 
-        margin: 10px auto !important;
-    }
-
-    header .search-bar input,
-    header .search-bar button {
-        font-size: 10pt !important;
-        padding: 6px !important;
-    }
     #about-us .guide-card {
         flex-basis: 100%; 
         margin-right: 0;
@@ -1034,13 +851,15 @@ nav a:hover {
         margin-bottom: 10px;
     }
 
-    .tour-container {
-        padding: 0 5px;
+       .tour-container {
+        margin-left: -10px; 
+        margin-right: -10px;
     }
 
     .tour-card {
-        margin-bottom: 10px;
-        padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;  
+        margin-bottom: 20px; 
     }
 
    
@@ -1097,80 +916,63 @@ nav a:hover {
   }
 
   .map-container iframe {
-        width: 80% !important;
-        height: 200px !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        display: block !important;
+      height: 200px;
+      widrh: 60%;
     }
 
     .tour-filters .container {
-        flex-direction: column !important; 
-        align-items: stretch !important; 
+        flex-direction: column; 
+        align-items: stretch; 
     }
 
     .filter-button {
-        font-size: 12px !important;
-        padding: 6px 8px !important;
-        margin: 5px 0 !important;
+        font-size: 14px !important;
+        padding: 8px 12px !important; 
+        margin: 5px 0 !important; 
         width: 100% !important;
-        box-sizing: border-box !important;
-        display: block !important;
-        text-align: center !important;
+        box-sizing: border-box !important; 
     }
 
     #about-us .guide-card p {
-        margin-bottom: 15px !important; 
+        margin: 0 0 -10px 0;
     }
 
-    .subscribe-form {
-        width: 80% !important;
-        flex-direction: column !important;
-        align-items: stretch !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-    .subscribe-form input,
-    .subscribe-form button {
-        width: 100% !important;
-        margin-bottom: 5px !important;
-    }
-
-    
 }
 
 @media (max-width: 576px) {
     header .contact-info {
         font-size: 11pt;
     }
+
     nav a {
         font-size: 11pt;
-        padding: 6px 12px;
+        padding: 8px 16px;
     }
+
 }
 
 @media (max-width: 480px) {
-    .testimonial-card img {
-        width: 50px;
-        height: 50px;
+    #hero .hero-text h1 {
+        font-size: 24pt;
     }
-    .testimonial-card h3 {
-        font-size: 1em;
+
+    #hero .hero-text p {
+        font-size: 14pt;
     }
-    .testimonial-card p {
-        font-size: 0.9em;
-    }
-    .guide-card-wrapper {
-    width: 30%;
-    margin-left: auto;
+
+  #tour-details .tour-photos img {
+      max-width: 100%; 
+      height: 100px;
+      margin-bottom: 10px;
+  }
+  #tour-details .photo-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .guide-card-wrapper {
+    width: 30%; 
+    margin-left: auto; 
     margin-right: auto;
-    }
-        .tour-card .price {
-        font-size: 0.6em;
-    }
-    header .search-bar input,
-    header .search-bar button {
-        font-size: 10pt;
-        padding: 5px;
-    }
+  }
+
 }
