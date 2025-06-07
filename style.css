@@ -1048,7 +1048,7 @@ nav a:hover {
     }
 
     #hero .hero-image img {
-        height: 600px;
+        height: 500px;
     }
 
     .container {
@@ -1065,7 +1065,7 @@ nav a:hover {
     }
 
     #hero .hero-text p {
-        font-size: 16pt;
+        font-size: 14pt;
     }
 
     #tour-details .tour-photos img {
@@ -1092,12 +1092,19 @@ nav a:hover {
         font-size: 1em;
     }
 
+    .book-tour-btn {
+        font-size: 10pt;
+        padding: 6px 12px;
+    }
 
-    .book-tour-btn,
-    .book-tour-bottom .book-tour-btn,
+    .book-tour-bottom .book-tour-btn {
+        font-size: 12pt;
+        padding: 8px 16px;
+    }
+
     .book-tour-btn.large {
-        font-size: 10pt !important;
-        padding: 6px 10px !important;
+        font-size: 12pt;
+        padding: 8px 16px;
     }
    
     .tour-card .price {
@@ -1154,7 +1161,7 @@ nav a:hover {
 
   .map-container iframe {
       height: 200px;
-      widrh: 60%;
+      widrh: 40%;
     }
 
     .tour-filters .container {
@@ -1172,6 +1179,21 @@ nav a:hover {
 
     #about-us .guide-card p {
         margin: 0 0 -10px 0;
+    }
+
+    header .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 100%;
+    }
+
+    header .search-bar input {
+        border-radius: 5px 5px 0 0;
+        margin-bottom: 5px;
+    }
+
+    header .search-bar button {
+        border-radius: 0 0 5px 5px;
     }
 
 }
