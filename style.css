@@ -1040,68 +1040,98 @@ nav a:hover {
   height: 300px;
 }
 
-@media (max-width: 1200px) {
-    .container {
-        max-width: 90%;
-        padding: 0 10px;
-    }
-
-    header .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header .logo img {
-        margin-bottom: 10px;
-    }
-
-    header .contact-info {
-        text-align: center;
-        margin-bottom: 10px;
-        font-size: 12pt;
-    }
-
-    #tour-details .tour-photos img {
-         max-width: 100%; 
-        height: 400px;
-        margin-bottom: 20px;
-    }
-    #tour-details .photo-grid {
-      flex-direction: column;
-      align-items: center;
-    }
-
-}
-
-@media (max-width: 992px) {
-    nav .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        margin: 5px 0;
-        padding: 8px 15px;
-        font-size: 13pt;
-    }
-
-    .tour-card {
-        flex: 0 0 100%;
+@media (max-width: 768px) {
+    #about-us .guide-card {
+        flex-basis: 100%; 
         margin-right: 0;
         margin-bottom: 20px;
     }
 
-  .tour-overview {
-    flex-direction: column;
-    text-align: center;
+    #hero .hero-image img {
+        height: 600px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    header .logo img {
+        height: 80px;
+        width: 120px;
+    }
+
+    #hero .hero-text h1 {
+        font-size: 28pt;
+    }
+
+    #hero .hero-text p {
+        font-size: 16pt;
+    }
+
+    #tour-details .tour-photos img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .tour-container {
+        padding: 0 5px;
+    }
+
+    .tour-card {
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .tour-card h3 {
+        font-size: 1.1em;
+    }
+
+    .tour-card p {
+        font-size: 1em;
+    }
+
+
+    .book-tour-btn,
+    .book-tour-bottom .book-tour-btn,
+    .book-tour-btn.large {
+        font-size: 10pt !important;
+        padding: 6px 10px !important;
+    }
+   
+    .tour-card .price {
+        font-size: 0.7em;
+        min-height: auto;
+    }
+    #testimonials h2 {
+        font-size: 22pt;
+    }
+
+  .testimonial-card-container {
+    max-width: 100%;
   }
 
-  .tour-overview img,
-  .tour-info {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 10px;
-    text-align: center;
+  .arrow-button {
+    font-size: 1.5em;
+  }
+
+  .footer-content {
+      flex-direction: column;
+      text-align: center;
+  }
+  .footer-contacts,
+  .footer-links,
+  .footer-social {
+      text-align: center;
+  }
+
+  .footer-links {
+      flex-direction: column;
+  }
+
+  .footer-links-column {
+      margin-bottom: 20px;
   }
 
   #tour-details .tour-photos img {
@@ -1113,70 +1143,37 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
   }
+  .guide-card-wrapper {
+    width: 50%; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tour-card p {
+    font-size: 1em;
+  }
 
-}
-
-@media (max-width: 768px) {
-  /* *ВСЕ* вот это скопируй и замени: */
-    .tour-container {
-        padding: 0 10px; /*  Вернули отступы контейнера  */
+  .map-container iframe {
+      height: 200px;
+      widrh: 60%;
     }
 
-    .tour-card {
-        margin-bottom: 20px; /* Вернули отступ снизу */
-    }
-    /* === Возвращаем текст в карточке гида === */
-    #about-us .guide-card p {
-        margin-bottom: 0; /*  Убрали отступ  */
-    }
-    /* === Уменьшаем кнопки в фильтрах и делаем их в столбик === */
     .tour-filters .container {
-        flex-direction: column; /* В столбик */
-        align-items: stretch; /* На всю ширину */
+        flex-direction: column; 
+        align-items: stretch; 
     }
 
     .filter-button {
-        font-size: 12px !important; /* Еще меньше шрифт */
-        padding: 6px 8px !important; /* Еще меньше отступы */
-        margin: 5px 0 !important; /* Отступы сверху и снизу */
-        width: 100% !important; /* На всю ширину */
-        box-sizing: border-box !important; /* Чтобы padding не ломал ширину */
-    }
-    /* === Сжимаем карту и форму подписки === */
-    .map-container iframe {
-        width: 90% !important;  /*  Меньше ширина  */
-        height: 200px !important; /*  Меньше высота  */
-    }
-    .subscribe-form {
-        width: 90% !important; /*  Меньше ширина  */
-        flex-direction: column !important; /*  В колонку  */
-        align-items: stretch !important; /*  Растягиваем элементы  */
-    }
-    .subscribe-form input,
-    .subscribe-form button {
-        width: 100% !important; /*  На всю ширину  */
-        margin-bottom: 5px !important; /*  Отступ между ними  */
-    }
-     /* === Сжимаем еще немного hero image === */
-    #hero .hero-image img {
-        height: 400px;
-    }
-     /* === Меняем стили кнопок "Забронировать тур" (уменьшаем) === */
-    .book-tour-btn {
-        font-size: 10pt;
-        padding: 8px 16px;
+        font-size: 14px !important;
+        padding: 8px 12px !important; 
+        margin: 5px 0 !important; 
+        width: 100% !important;
+        box-sizing: border-box !important; 
     }
 
-    .book-tour-bottom .book-tour-btn {
-        font-size: 12pt;
-        padding: 8px 16px;
+    #about-us .guide-card p {
+        margin: 0 0 -10px 0;
     }
 
-    .book-tour-btn.large {
-        font-size: 12pt;
-        padding: 8px 16px;
-    }
-    /*  и вот здесь заканчивается  */
 }
 
 @media (max-width: 576px) {
